@@ -14,7 +14,7 @@ The service uses Protocol Buffers (gRPC) instead of REST as requested.
 What is implemented
 
 - Proto file: `Protos/person.proto` with RPCs: `CreatePerson`, `GetPerson`, `UpdatePerson`, `DeletePerson`, `GetAllPersons`.
-- Server: `Services/PersonServiceImpl` implements the RPCs and uses `AppDbContext` (EF Core) for storage.
+- Server: `Services/PersonService` implements the RPCs and uses `AppDbContext` (EF Core) for storage.
 - Storage: EF Core in-memory database (`UseInMemoryDatabase`) for easy local execution.
 - Input validation: simple checks for `FirstName`/`LastName` and `NationalCode` (10 digits).
 - Error handling: uses `RpcException` with gRPC status codes (`InvalidArgument`, `NotFound`).
